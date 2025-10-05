@@ -1,0 +1,13 @@
+def min_operations(arr):
+    neg = arr.count(-1)
+    zero = arr.count(0)
+    return zero + (2 if neg % 2 == 1 else 0)
+ 
+ 
+def solve():
+    t = int(input())
+    for _ in range(t):
+        n = int(input())
+        arr = list(map(int, input().split()))
+        print(min_operations(arr))
+solve()
